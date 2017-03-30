@@ -1,0 +1,14 @@
+{
+  "name": "getallteam",
+  "version": "1.0.0",
+  "description": "Gets all team specific to user",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sayan Nandi\u001b[A\u001b[A\u001b[A\u001b[B\u001b[B\u001b[B",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.13.0"
+  }
+}
