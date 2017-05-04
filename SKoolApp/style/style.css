@@ -1,0 +1,27 @@
+EmployeeSearch 
+{
+    text-align: right !important;
+}
+
+.circlePaper {
+  height: 150px;
+  width: 150px;
+  margin: 20px;
+  text-align:center;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.paperContent{
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid darkblue;
+    border-radius: 4px;
+    height: 70px;
+    width:220px;
+    display: inline-block;    
+    margin: 20px;
+}
+.rightAlign{
+    text-align:right;
+}
