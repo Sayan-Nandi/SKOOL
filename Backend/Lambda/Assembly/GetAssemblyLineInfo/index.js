@@ -14,15 +14,20 @@ var mysqlstatement = "";
 
 function processEvent(event, context, callback) {
 /* Create mySQL statement.  The forward slash at the end of each line is to instruct old versions of node that the string has a line break.  Because node. */
-	
-	//var TeamId = event.query.teamid;
-	var Id = event.query.TeamId;
-	//mysqlstatement = 'CALL GetEmployeebyTeam('+Id+')';
+	var _fromDt = event.SearchFromDate;
+	var _toDt = event.SearchToDate;
 
-	mysqlstatement = 'CALL GetEmployeeMasterData('+Id+')';
 
+
+
+	mysqlstatement = `CALL GetAssemblyLineDetails('${_fromDt}'
+						, '${_toDt}')`;
+
+
+//console.log(mysqlstatement);
 	/* Filter out tabs and the space semi-colon */
 	mysqlstatement = mysqlstatement.replace(/\t+/g, " ").replace(/\s\;/g, ";");
+//console.log(mysqlstatement);	
 
 	var mysqlconnect = {
 		host: decryptedHost,
@@ -31,6 +36,7 @@ function processEvent(event, context, callback) {
 		password: decryptedMySqlPassword,
 		port: decryptedMySqlPort
 	};
+	
 	/* Create the mySQL connection to use for this function */
 	var connection = mysql.createConnection(mysqlconnect);
     console.log("connection created");
@@ -44,10 +50,9 @@ function processEvent(event, context, callback) {
 		}
 		else {
 			/* Statement completed, let's see what we've got */
-			callback(null, rows);
+			callback(null, 'Fetch assembly info successfull!');
 		}
 	});
-
 	/* Free the connection */
 	connection.end();
 }
@@ -55,12 +60,12 @@ function processEvent(event, context, callback) {
 DEFAULT MAIN FUNCTION CALL
 */
 exports.handler = function(event, context, callback) {
-    console.log("begining of the function");
-	console.log(event);
+	if(event.SearchFromDate)
+	{
 
-if (decrypted) {
-        processEvent(event, context, callback);
-    } else {
+        if (decrypted) {
+            processEvent(event, context, callback);
+        } else {
 			config.decrypt(config.env_variable.MySqlHost,(err, data) => {
 				if(err)
 				{	
@@ -118,4 +123,8 @@ if (decrypted) {
 			});
 			
         }
+
+	}
+	else
+		callback(new Error('[BadRequest] TeamId is not passed.'));
 };

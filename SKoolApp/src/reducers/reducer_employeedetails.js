@@ -14,7 +14,7 @@ export default function(state=INITIAL_STATE, action)
                         empattributes:action.payload.data[2],
                         attribs:[JSON.parse(
                             `{${action.payload.data[2].map((attrib) => {
-                                return `"attrib_${attrib.EmployeeTeamAttributeId}" : ${attrib.EmployeeTeamAttributeValue}`})}}`)] 
+                                return `"attrib_${attrib.AttributeId}_${attrib.EmployeeTeamAttributeId}" : ${attrib.EmployeeTeamAttributeValue}`})}}`)] 
                 });
         default:
             return state;

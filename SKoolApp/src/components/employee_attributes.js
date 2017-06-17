@@ -62,9 +62,9 @@ class EmployeeAttribute extends Component
                                         <div key={attrib.EmployeeTeamAttributeId}>                  
                                             {renderFormControl(
                                                 attributeObject(`${attrib.AttributeName} (Weight ${attrib.AttributeWeight} %)`,false)
-                                                , `attrib_${attrib.EmployeeTeamAttributeId}`
+                                                , `attrib_${attrib.AttributeId}_${attrib.EmployeeTeamAttributeId}`
                                                 , null
-                                                , `attrib_${attrib.EmployeeTeamAttributeId}`)}                                                              
+                                                , `attrib_${attrib.EmployeeTeamAttributeValue}`)}                                                              
                                         </div> 
                                     </GridTile>
                                 })}

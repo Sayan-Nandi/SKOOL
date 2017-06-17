@@ -1,0 +1,57 @@
+21,Sales,5,30
+22,Merchandising,5,20
+23,MIP/TA Integration,5,10
+24,SAP Integration,5,10
+25,Other Interfaces,5,10
+26,Report,5,10
+27,localization,5,10
+28,Sales,6,30
+29,Merchandising,6,20
+30,MIP/TA Integration,6,10
+31,SAP Integration,6,10
+32,Other Interfaces,6,10
+33,Report,6,10
+34,localization,6,10
+35,Sales,7,30
+36,Merchandising,7,20
+37,MIP/TA Integration,7,10
+38,SAP Integration,7,10
+39,Other Interfaces,7,10
+40,Report,7,10
+41,localization,7,10
+42,SNOW,9,20
+43,SCM,9,20
+44,ALM,9,20
+45,Agile,9,10
+46,TFS/Git HUB,9,30
+47,SNOW,10,20
+48,SCM,10,20
+49,ALM,10,20
+50,Agile,10,10
+51,TFS/Git HUB,10,30
+52,SNOW,11,20
+53,SCM,11,20
+54,ALM,11,20
+55,Agile,11,10
+56,TFS/Git HUB,11,30
+57,Consulting,13,25
+58,Verbal comm,13,10
+59,Flexibility,13,5
+60,Attitude,13,10
+61,Written comm,13,20
+62,Client handling skill,13,20
+63,Availability,13,10
+64,Consulting,14,25
+65,Verbal comm,14,10
+66,Flexibility,14,5
+67,Attitude,14,10
+68,Written comm,14,20
+69,Client handling skill,14,20
+70,Availability,14,10
+71,Consulting,15,25
+72,Verbal comm,15,10
+73,Flexibility,15,5
+74,Attitude,15,10
+75,Written comm,15,20
+76,Client handling skill,15,20
+77,Availability,15,10

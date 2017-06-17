@@ -28,7 +28,7 @@ export function getEmployeeListByTeam(teamid)
     //console.log('Request : ',request);
     return{
         type:FETCH_EMP_LIST,
-        payload: request
+        payload: [request, teamid]
     }    
 
 }

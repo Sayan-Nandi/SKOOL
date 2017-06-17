@@ -17,6 +17,9 @@ class Landing extends Component
         return(
             <div id="page-wrapper">                           
                 <div className="row">
+                    <div className="col-md-12 text-right">
+                        <Link to=""
+                    </div>
                     <div className="col-lg-12">
                         <h1 className="page-header">Employee List</h1>
                     </div>

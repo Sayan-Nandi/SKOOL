@@ -1,0 +1,15 @@
+{
+  "name": "getemployeemaster",
+  "version": "1.0.0",
+  "description": "Get the employee details information",
+  "main": "index.js",
+  "dependencies": {
+    "mysql": "^2.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jaydeep Ghosh",
+  "license": "ISC"
+}
